@@ -1,6 +1,6 @@
-# ANPR
+# Character Detection Automation
 
-Este proyecto utiliza modelos YOLOv11 con Ultralytics para realizar reconocimiento automático de placas vehiculares (ANPR - Automatic Number Plate Recognition) a partir de imágenes. 
+Este proyecto utiliza modelos YOLOv11 con Ultralytics para realizar reconocimiento automático de numeros de placas vehiculares (ANPR - Automatic Number Plate Recognition) a partir de imágenes. 
 
 ---
 
