@@ -32,18 +32,8 @@ pip install requests psutil py-cpuinfo "ultralytics-thop>=2.0.0"
 
 🚀 Cómo usar
 
-Para deteccion de tipo, placa, estado y color:
-
-Ejecuta el script Detect_complete.py pasando la ruta de la imagen como argumento:
+Ejecuta el script Detect.py pasando los argumentos: --process_id --image_path --detected_plate 
 
 ```bash
-python3 Detect_complete.py /ruta/a/imagen.jpg
-```
-
-Para deteccion y recorte de placas:
-
-Ejecuta el script Detect.py pasando los argumentos --date_time DATE_TIME --location LOCATION --id_camara ID_CAMARA --image_path IMAGE_PATH: 
-
-```bash
-python3 Detect.py --date_time 2025-08-09 --location Bello --id_camara Bello3 --image_path /Users/sarboledab/Downloads/carro4.jpg
+python3 Detect.py --process_id 452CD --image_path /Users/sarboledab/Downloads/plate_2.png --detected_plate CKN3G4
 ```
