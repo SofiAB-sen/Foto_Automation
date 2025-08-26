@@ -8,8 +8,9 @@ from ultralytics import YOLO
 import cv2
 import glob 
 import requests
+from io import BytesIO
 
-
+##Funcion deteccion de caracteres
 def run_yolo_detector_characteres(model, image_pil):
     results = model(image_pil)  
     detections = results[0].boxes
@@ -35,7 +36,8 @@ def run_yolo_detector_characteres(model, image_pil):
     #print(f"plate: {plate}")
     return plate, mean_confidence
 
-def run_yolo_detector_plate(model_plates, model_characteres, path):
+##Funcion deteccion de placas
+"""def run_yolo_detector_plate(model_plates, model_characteres, path):
     
     image_pil = Image.open(path).convert("RGB")
     
@@ -70,11 +72,11 @@ def run_yolo_detector_plate(model_plates, model_characteres, path):
                 print(f"Plate: {plate}, Confidence: {confidence:.2f}")
     if not dic['plate']:
         print("No plate detected.")
-    return dic if dic['plate'] else None
-    
-
+    return dic if dic['plate'] else None"""
+  
+##Funcion para enviar logs 
 def send_log(process_id, message, status):
-    url = "https://webhook.site/c93de20c-ec28-463e-900f-fe577e6e4db7"
+    url = "https://webhook.site/c016b479-3691-436a-bd36-bcd1c6ead397"
     payload = {
         "process_id": process_id,
         "status": status,
@@ -86,3 +88,19 @@ def send_log(process_id, message, status):
         response.raise_for_status()
     except Exception as e:
         print(f"Failed to send log: {e}")
+
+##Funcion para cargar imagen desde URL o path local
+def load_image(path, process_id):
+    if path.startswith("http://") or path.startswith("https://"):
+        try:
+            response = requests.get(path, timeout=30)
+            response.raise_for_status()
+            return Image.open(BytesIO(response.content)).convert("RGB")
+        except Exception as e:
+            send_log(process_id, f"Error downloading from URL: {e}", status="Revision Needed")
+            return None
+    elif os.path.exists(path):
+        return Image.open(path).convert("RGB")
+    else:
+        send_log(process_id, "The path does not exist or is not valid.", status="Revision Needed")
+        return None 

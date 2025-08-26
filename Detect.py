@@ -9,12 +9,13 @@ import cv2
 import glob 
 from datetime import datetime
 import argparse
+from io import BytesIO
+import requests
 
 
 import func
 
 #Models
-plate_model = YOLO("yolo11n_Plate_Recognition_v2.pt") 
 characters_model = YOLO("yolo11n_OCR_v2.pt") 
 
 parser = argparse.ArgumentParser(description='Detect plates and compare with given information.')
@@ -26,26 +27,21 @@ args = parser.parse_args()
 
 #Obtener argumentos 
 process_id = args.process_id
-image_path = args.image_path
+image_path = args.image_path.replace("\\", "")
 detected_plate = args.detected_plate
 
 
-if not os.path.exists(image_path):
-    print("Teh path does not exists.")
-    exit()
-  
-
 def process_image(path, process_id):
-    if not os.path.exists(image_path):
-        print("The image path does not exist.")
+    image_pil = func.load_image(path, process_id)
+    if image_pil is None:
+        func.send_log(process_id, "Could not download image.", status="Revision Needed")
         return
-    image_pil = Image.open(path).convert("RGB")
     result = func.run_yolo_detector_characteres(characters_model, image_pil)
     if result:
         plate = result[0]
         confidence = result[1]
         print(f"Detected plate: {plate}, Mean confidence: {confidence:.2f}")
-        if confidence < 0.5:
+        if confidence < 0.7:
             func.send_log(process_id, "Low confidence in plate detection, human revision needed.", status="Revision Needed")
             return 
         
@@ -58,7 +54,6 @@ def process_image(path, process_id):
     else:
         func.send_log(process_id, "No detection.", status="Revision Needed")
 
-if os.path.isfile(image_path):
-    process_image(image_path, process_id)
+process_image(image_path, process_id)
 
 
