@@ -1,0 +1,51 @@
+certifi==2025.8.3
+charset-normalizer==3.4.2
+colorama @ file:///home/conda/feedstock_root/build_artifacts/colorama_1733218098505/work
+contourpy @ file:///private/var/folders/c_/qfmhj66j0tn016nkx_th4hxm0000gp/T/abs_6236u4rf19/croot/contourpy_1732540057596/work
+cycler @ file:///home/conda/feedstock_root/build_artifacts/cycler_1733332471406/work
+Deprecated @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_78fb3v9g5h/croots/recipe/deprecated_1659726426782/work
+filelock @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_90zocybn3d/croot/filelock_1744281394121/work
+fonttools @ file:///Users/runner/miniforge3/conda-bld/fonttools_1752722707143/work
+fsspec @ file:///private/var/folders/c_/qfmhj66j0tn016nkx_th4hxm0000gp/T/abs_f2ciesw7q6/croot/fsspec_1753796008802/work
+gmpy2 @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_a9jzez1qcu/croot/gmpy2_1738085473561/work
+idna==3.10
+importlib_metadata @ file:///private/var/folders/c_/qfmhj66j0tn016nkx_th4hxm0000gp/T/abs_3e5enqet8m/croot/importlib_metadata-suite_1732633497061/work
+Jinja2 @ file:///private/var/folders/c_/qfmhj66j0tn016nkx_th4hxm0000gp/T/abs_f4xtf61_ib/croot/jinja2_1741715270435/work
+kiwisolver @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_92lgswl3y6/croot/kiwisolver_1737040154211/work
+MarkupSafe @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_76vhch455b/croot/markupsafe_1738584048225/work
+matplotlib==3.10.0
+mpmath @ file:///private/var/folders/c_/qfmhj66j0tn016nkx_th4hxm0000gp/T/abs_8fyoqwupl2/croot/mpmath_1690848275746/work
+munkres==1.1.4
+networkx @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_ba1do7fwxc/croot/networkx_1737043398715/work
+numpy @ file:///private/var/folders/c_/qfmhj66j0tn016nkx_th4hxm0000gp/T/abs_b7iptlxgej/croot/numpy_and_numpy_base_1708638622773/work/dist/numpy-1.26.4-cp310-cp310-macosx_10_9_x86_64.whl#sha256=9699ffbfee60303323e1bd3d1e591a5fd3b8960e72a61fc675d2c4bc1cb76148
+opencv-python==4.8.0.76
+opentelemetry-api @ file:///private/var/folders/c_/qfmhj66j0tn016nkx_th4hxm0000gp/T/abs_34b6ots4po/croot/opentelemetry-api_1743171659500/work
+packaging @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_packaging_1745345660/work
+pandas @ file:///Users/runner/miniforge3/conda-bld/pandas_1726878440170/work
+patsy @ file:///home/conda/feedstock_root/build_artifacts/patsy_1733792384640/work
+pillow @ file:///private/var/folders/c_/qfmhj66j0tn016nkx_th4hxm0000gp/T/abs_59qe1phg3h/croot/pillow_1752524533185/work
+psutil==7.0.0
+py-cpuinfo==9.0.0
+pyparsing @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_pyparsing_1753873557/work
+python-dateutil @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_python-dateutil_1751104122/work
+pytz @ file:///home/conda/feedstock_root/build_artifacts/pytz_1706886791323/work
+PyYAML @ file:///Users/runner/miniforge3/conda-bld/pyyaml_1737454722142/work
+requests==2.32.4
+scipy @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_1bvg93f7ku/croot/scipy_1747238043368/work/dist/scipy-1.15.3-cp310-cp310-macosx_10_15_x86_64.whl#sha256=15cbd3251181d4cc3f52115c248f6fe6ba10b2d57462acc3a4e7fc5c4003a1a5
+seaborn @ file:///home/conda/feedstock_root/build_artifacts/seaborn-split_1733730015268/work
+six @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_six_1753199211/work
+statsmodels @ file:///Users/runner/miniforge3/conda-bld/statsmodels_1751917565415/work
+sympy @ file:///private/var/folders/c_/qfmhj66j0tn016nkx_th4hxm0000gp/T/abs_3ej0z2jk7t/croot/sympy_1738108502551/work
+torch @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_7918qdo__j/croot/libtorch_1744403106694/work
+torchaudio @ file:///private/var/folders/c_/qfmhj66j0tn016nkx_th4hxm0000gp/T/abs_13h7jqda5r/croot/torchaudio_1739894013231/work
+torchvision @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_24c9g5yuof/croot/torchvision_1746818807124/work
+tornado @ file:///Users/runner/miniforge3/conda-bld/tornado_1748003362879/work
+tqdm @ file:///home/conda/feedstock_root/build_artifacts/tqdm_1735661334605/work
+typing_extensions @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_6dn2s8ln8g/croot/typing_extensions_1734714858107/work
+tzdata @ file:///home/conda/feedstock_root/build_artifacts/python-tzdata_1742745135198/work
+ultralytics==8.3.174
+ultralytics-thop==2.0.15
+unicodedata2 @ file:///Users/runner/miniforge3/conda-bld/unicodedata2_1736692534252/work
+urllib3==2.5.0
+wrapt @ file:///private/var/folders/c_/qfmhj66j0tn016nkx_th4hxm0000gp/T/abs_d31ddfi6ve/croot/wrapt_1736543745236/work
+zipp @ file:///private/var/folders/c_/qfmhj66j0tn016nkx_th4hxm0000gp/T/abs_d1md1mr9su/croot/zipp_1732630765619/work
