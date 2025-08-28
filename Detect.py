@@ -22,17 +22,17 @@ parser = argparse.ArgumentParser(description='Detect plates and compare with giv
 parser.add_argument('--process_id', required=True, help='Process ID')
 parser.add_argument('--image_path', required=True, help='Path to image file or folder')
 parser.add_argument('--detected_plate', required=True, help='Primary plate detection')
-
+parser.add_argument('--endpoint_url', required=True, help='Endpoint URL for sending logs')
 args = parser.parse_args()
 
 #Obtener argumentos 
 process_id = args.process_id
 image_path = args.image_path.replace("\\", "")
 detected_plate = args.detected_plate
+endpoint_url = args.endpoint_url
 
-
-def process_image(path, process_id):
-    image_pil = func.load_image(path, process_id)
+def main():
+    image_pil = func.load_image(image_path, process_id, endpoint_url)
     if image_pil is None:
         func.send_log(process_id, "Could not download image.", status="Revision Needed")
         return
@@ -42,18 +42,19 @@ def process_image(path, process_id):
         confidence = result[1]
         print(f"Detected plate: {plate}, Mean confidence: {confidence:.2f}")
         if confidence < 0.7:
-            func.send_log(process_id, "Low confidence in plate detection, human revision needed.", status="Revision Needed")
+            func.send_log(process_id, "Low confidence in plate detection, human revision needed.", status="Revision Needed", endpoint=endpoint_url)
             return 
         
         # Compare with the detected plate
         if plate == detected_plate:
-            func.send_log(process_id, f"Plate {plate} matches the camera detected plate {detected_plate}.", status="Match")
+            func.send_log(process_id, f"Plate {plate} matches the camera detected plate {detected_plate}.", status="Match", result=True, endpoint=endpoint_url)
         else:
-
-            func.send_log(process_id, f"Plate {plate} does not match the camera detected plate {detected_plate}.", status="Mismatch")
+            func.send_log(process_id, f"Plate {plate} does not match the camera detected plate {detected_plate}.", status="Mismatch", result=False, endpoint=endpoint_url)
     else:
-        func.send_log(process_id, "No detection.", status="Revision Needed")
+        func.send_log(process_id, "No detection.", status="Revision Needed", endpoint=endpoint_url)
 
-process_image(image_path, process_id)
+if __name__ == "__main__":
+    main()
+
 
 
