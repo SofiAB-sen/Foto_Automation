@@ -33,8 +33,8 @@ pip install requests psutil py-cpuinfo "ultralytics-thop>=2.0.0"
 
 🚀 Cómo usar
 
-Ejecuta el script Detect.py pasando los argumentos: --process_id --image_path --detected_plate 
+Ejecuta el script Detect.py pasando los argumentos: --process_id --image_path --detected_plate --endpoint_url
 
 ```bash
-python3 Detect.py --process_id 452CD --image_path /Users/sarboledab/Downloads/plate_2.png --detected_plate CKN3G4
+python3 Detect.py --process_id 1 --image_path "https://www.pruebaderuta.com/wp-content/uploads/2016/03/placa-amarilla.jpg" --detected_plate CVY000 --endpoint_url "https://webhook.site/c016b479-3691-436a-bd36-bcd1c6ead397"
 ```
