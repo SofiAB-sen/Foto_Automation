@@ -11,14 +11,13 @@ Este proyecto utiliza modelos YOLOv11 con Ultralytics para realizar reconocimien
 - Python 3.10
 - Conda o Miniconda
 
-### 🔹 Crear entorno Conda usando requirements.txt
+### 🔹 Crear entorno Conda usando environment.yml
 
 ```bash
-conda create -n yolo-detect python=3.10
+conda env create -f environment.yml
 conda activate yolo-detect
-pip install -r [requirements.txt](http://_vscodecontentref_/1)
 ```
-Sin requirements.txt:
+Sin environment.yml:
 
 ```bash
 conda create -n yolo-detect python=3.10

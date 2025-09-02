@@ -1,0 +1,19 @@
+name: yolo-detect
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy<2
+  - pillow
+  - matplotlib
+  - tqdm
+  - pyyaml
+  - pandas
+  - seaborn
+  - pip
+  - requests
+  - opencv
+  - pip:
+      - psutil
+      - py-cpuinfo
+      - ultralytics-thop>=2.0.0
