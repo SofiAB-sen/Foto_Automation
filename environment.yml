@@ -12,7 +12,7 @@ dependencies:
   - seaborn
   - pip
   - requests
-  - opencv
+  - opencv=4.8.0.76 
   - pip:
       - psutil
       - py-cpuinfo

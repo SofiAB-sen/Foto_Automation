@@ -1,0 +1,11 @@
+numpy<2
+pillow
+matplotlib
+tqdm
+pyyaml
+pandas
+seaborn
+requests
+psutil
+py-cpuinfo
+ultralytics>=2.0.0
